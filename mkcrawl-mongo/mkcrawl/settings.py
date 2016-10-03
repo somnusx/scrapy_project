@@ -14,17 +14,24 @@ BOT_NAME = 'mkcrawl'
 SPIDER_MODULES = ['mkcrawl.spiders']
 NEWSPIDER_MODULE = 'mkcrawl.spiders'
 
+
 ITEM_PIPELINES = {
     'mkcrawl.pipelines.MkcrawlPipeline':300
-}#pipelines 保存json设置
-
+}
 
 COOKIES_ENABLES=False
 DOWNLOADER_MIDDLEWARES = {
 	'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware':None,
 	'mkcrawl.middlewares.RotateUserAgentMiddleware':400,
-}#变换浏览器标示设置
+}
 
+
+
+
+MONGODB_HOST = '127.0.0.1'
+MONGODB_PORT = 27017
+MONGODB_DBNAME = 'mk'
+MONGODB_DOCNAME = 'links'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'mkcrawl (+http://www.yourdomain.com)'
 

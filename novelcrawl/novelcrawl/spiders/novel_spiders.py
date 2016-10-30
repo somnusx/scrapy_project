@@ -11,8 +11,6 @@ class NovelSpider(CrawlSpider):
     start_urls = ['http://www.seecd.net/top/allvisit-{}.html'.format(i) for i in range(1,5382)]
 
     rules = (
-        #Rule(LinkExtractor(allow=('category\.php', ), follow=True)),
-
         Rule(LinkExtractor(allow=('book-[0-9]{1,9}\.html', )), callback='parse_two',follow=True),
     )
     def parse_item(self,response):

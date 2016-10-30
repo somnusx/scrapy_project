@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'novelcrawl.spiders'
 
 ITEM_PIPELINES = {
     'novelcrawl.pipelines.NovelcrawlPipeline':300
-}#pipelines 保存json设置
+}
 
 
 COOKIES_ENABLES=False
@@ -26,6 +26,10 @@ DOWNLOADER_MIDDLEWARES = {
 }#变换浏览器标示设置
 
 
+MONGODB_HOST = '127.0.0.1'
+MONGODB_PORT = 27017
+MONGODB_DBNAME = 'mk'
+MONGODB_DOCNAME = 'novel'
 
 
 
